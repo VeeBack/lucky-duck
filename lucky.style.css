@@ -10,13 +10,14 @@ body {
 }
 .Navbar{
  background-color: #fff;
- height: 90px;
+ height: 60px;
  display: flex;
 }
 .name {
  font-family: 'Sofia', sans-serif;
  color: black;
- margin-top:20px;
+ font-size: 14px;
+ margin-top:6px;
  margin-left: 200px;
  text-shadow:2px 2px 2px rgb(83, 64, 15);
 }
