@@ -22,57 +22,67 @@ body {
  margin-left: 200px;
  text-shadow:2px 2px 2px rgb(83, 64, 15);
 }
+/*--------------menu-component------------*/
 .menu-component{
  display: grid;
- grid-template-columns: repeat(2,1fr);
+ grid-template-columns: repeat(2, 1fr);
  padding-top: 3.5rem;
  padding-bottom: 5rem;
  grid-gap: 30px 30px;
  margin: 2%;
  justify-items: center;
-}
-.meal{
- position: relative;
  border-radius: 15px;
 }
 
-.meal img{
- width: 350px;
-  height: 200px;
-  -o-object-fit: cover;
-  object-fit: cover;
+.meal .menu-text{
+  width: 250px;
+  height: 250px;
+  padding: 1rem;
   border-radius: 15px;
-}
- #meal-11{
- justify-items: center;
- margin-left: 100%;
-}
-.meal .hover-text{
-  width: 350px;
-  height: 200px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 15px;
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
-  transform: scale(0);
-  transition: all 0.4s ease-in-out;
   color: black;
-  background-color: rgba(255, 255, 255, 0.683);
+  background-image: url(./bilder_lucky_duck/woodwall.jpg);
 }
-.hover-text p {
- margin: 0px 7%;
+
+#meal-11{
+  justify-items: center;
+  margin-left: 100%;
+ }
+
+.menu-text p {
+ margin: 0px 2%;
+ font-size: 16px;
+}
+
+.menu-text h3 {
  font-size: 18px;
-}
-.hover-text h3 {
- font-size: 20px;
- margin: 5% 6%;
+ margin: 2% 6%;
 }
 
-.meal:hover .hover-text {
- opacity: 1;
-  transform: scale(1);
+.menu-text h4 {
+  margin: 2% 3%;
+  color: rgba(0, 0, 0, 0.762);
+}
+
+.menu-text .eng-text {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.762);
+}
+@media screen and (max-width: 600px) {
+  .menu-component {
+    grid-template-columns: 1fr;
+    padding-top: 2.5rem;
+  }
+  #meal-11{
+    margin-left: 0px;
+  }
+  .name{
+    font-size: 12px;
+    
+    margin-left: 100px;
+  }
+}
   
-}
-
+/*-----------------------------------------*/
