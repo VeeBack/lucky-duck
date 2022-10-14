@@ -5,7 +5,8 @@
 }
 body {
  background-image: url(./img/background1.jpeg);
- background-position: 100% 100%;
+ background-size: cover;
+ background-repeat: no-repeat;
  font-family: "Roboto Condensed", sans-serif;
 }
 .Navbar{
@@ -21,3 +22,57 @@ body {
  margin-left: 200px;
  text-shadow:2px 2px 2px rgb(83, 64, 15);
 }
+.menu-component{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ padding-top: 3.5rem;
+ padding-bottom: 5rem;
+ grid-gap: 30px 30px;
+ margin: 2%;
+ justify-items: center;
+}
+.meal{
+ position: relative;
+ border-radius: 15px;
+}
+
+.meal img{
+ width: 350px;
+  height: 200px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 15px;
+}
+ #meal-11{
+ justify-items: center;
+ margin-left: 100%;
+}
+.meal .hover-text{
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.683);
+}
+.hover-text p {
+ margin: 0px 7%;
+ font-size: 18px;
+}
+.hover-text h3 {
+ font-size: 20px;
+ margin: 5% 6%;
+}
+
+.meal:hover .hover-text {
+ opacity: 1;
+  transform: scale(1);
+  
+}
+
