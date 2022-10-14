@@ -1,0 +1,23 @@
+* {
+ margin: 0px;
+ padding: 0px;
+ list-style: none;
+}
+body {
+ background-image: url(./img/background1.jpeg);
+ background-position: 100% 100%;
+ font-family: "Roboto Condensed", sans-serif;
+}
+.Navbar{
+ background-color: #fff;
+ height: 60px;
+ display: flex;
+}
+.name {
+ font-family: 'Sofia', sans-serif;
+ color: black;
+ font-size: 14px;
+ margin-top:6px;
+ margin-left: 200px;
+ text-shadow:2px 2px 2px rgb(83, 64, 15);
+}
