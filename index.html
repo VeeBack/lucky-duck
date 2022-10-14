@@ -9,10 +9,11 @@
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+ <link rel="stylesheet" href="/daniel-topnav.css">
  <title>Lucky Duck</title>
 </head>
 <body>
- <div class="Navbar">
+ <!-- <div class="Navbar">
   <div class="logo"></div>
   <div class="name">
    <h1>Lucky Duck Restaurang</h1>
@@ -21,7 +22,41 @@
   </div>
   <div class="allergens-icon"></div>
 
- </div><!--End of Navbar-->
+ </div> -->
+ <!--End of Navbar-->
+
+ <header class="flex-container">
+    <img src="/img/Lucky_duck1.png" alt="Lucky Duck">
+    
+    
+    <nav class="flex-container">
+        <div id="allergies-icon-container" class="flex-container">
+            <img onclick="toggleShowHide('navbar-barley')" id="navbar-barley" class="hide" src="/img/barley.png" alt="">
+            <img onclick="toggleShowHide('navbar-shrimp')" id="navbar-shrimp" class="hide" src="/img/shrimp.png" alt="">
+            <img onclick="toggleShowHide('navbar-egg')" id="navbar-egg" class="hide" src="/img/egg.png" alt="">
+            <img onclick="toggleShowHide('navbar-fish')" id="navbar-fish" class="hide" src="/img/fish.png" alt="">
+            <img onclick="toggleShowHide('navbar-peanut')" id="navbar-peanut" class="hide" src="/img/peanut.png" alt="">
+            <img onclick="toggleShowHide('navbar-milk')" id="navbar-milk" class="hide" src="/img/milk.png" alt="">                    
+        </div>
+
+        <div class="dropdown">
+            <!-- bygg funktion ändra pil -->
+            <button onclick="showDropDown('myDropdown')" class="dropbtn" id="dropbtn-allergies">Exkludera allergier &#x25B2;</button>
+            <div id="myDropdown" class="dropdown-content">
+                <div onclick="toggleShowHide('navbar-barley')"><img src="/img/barley.png" alt="">Vete</div>
+                <div onclick="toggleShowHide('navbar-shrimp')"><img src="/img/shrimp.png" alt="">Skaldjur</div>
+                <div onclick="toggleShowHide('navbar-egg')"><img src="/img/egg.png" alt="">Ägg</div>
+                <div onclick="toggleShowHide('navbar-fish')"><img src="/img/fish.png" alt="">Fisk</div>
+                <div onclick="toggleShowHide('navbar-peanut')"><img src="/img/peanut.png" alt="">Jordnöt</div>
+                <div onclick="toggleShowHide('navbar-milk')"><img src="/img/milk.png" alt="">Mejeri</div>
+            </div>
+        </div>
+    <img onclick="toggleShowHide('button-se-flag'), toggleShowHide('button-uk-flag')" class="hide" id="button-uk-flag" src="/img/united-kingdom.png" alt="English">
+    <img onclick="toggleShowHide('button-se-flag'), toggleShowHide('button-uk-flag')" id="button-se-flag" src="/img/sweden.png" alt="English">
+    </nav>
+    
+</header>
+
  <!------------------------------------------------------------------>
  <div class="menu-component">
   <div class="meal-1">
@@ -46,5 +81,6 @@
  </div><!--End of footer-->
  <!------------------------------------------------------------------>
  <script src="./lucky.script.js"></script>
+ <script src="/daniel-topnav.js"></script>
 </body>
 </html>
