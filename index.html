@@ -39,9 +39,10 @@
             <img onclick="toggleShowHide('navbar-milk')" id="navbar-milk" class="hide" src="/img/milk.png" alt="">                    
         </div>
 
-        <div class="dropdown">
-            <!-- bygg funktion ändra pil -->
-            <button onclick="showDropDown('myDropdown')" class="dropbtn" id="dropbtn-allergies">Exkludera allergier &#x25B2;</button>
+        <div class="dropdown"> <!-- bygg funktion ändra pil -->
+            
+            <button onclick="showDropDown('myDropdown')" class="dropbtn" id="dropbtn-allergies">Exkludera allergener &#x25BC;</button>
+            
             <div id="myDropdown" class="dropdown-content">
                 <div onclick="toggleShowHide('navbar-barley')"><img src="/img/barley.png" alt="">Vete</div>
                 <div onclick="toggleShowHide('navbar-shrimp')"><img src="/img/shrimp.png" alt="">Skaldjur</div>
@@ -50,9 +51,10 @@
                 <div onclick="toggleShowHide('navbar-peanut')"><img src="/img/peanut.png" alt="">Jordnöt</div>
                 <div onclick="toggleShowHide('navbar-milk')"><img src="/img/milk.png" alt="">Mejeri</div>
             </div>
+       
         </div>
-    <img onclick="toggleShowHide('button-se-flag'), toggleShowHide('button-uk-flag')" class="hide" id="button-uk-flag" src="/img/united-kingdom.png" alt="English">
-    <img onclick="toggleShowHide('button-se-flag'), toggleShowHide('button-uk-flag')" id="button-se-flag" src="/img/sweden.png" alt="English">
+    <img onclick="toggleShowHide('button-se-flag'), toggleShowHide('button-uk-flag')" class="button-flag hide" id="button-uk-flag" src="/img/united-kingdom.png" alt="English">
+    <img onclick="toggleShowHide('button-se-flag'), toggleShowHide('button-uk-flag')" class="button-flag" id="button-se-flag" src="/img/sweden.png" alt="English">
     </nav>
     
 </header>
