@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0
+}
+
+header {
+  padding: 5px 20px;
+  justify-content: space-between;
+  height: 56px;
+  background-color: white;
+}
+
+#allergies-icon-container {
+  margin: 0px 16px;
+}
+
+#allergies-icon-container div {
+  color: white;
+  height: 35px;
+  width: 40px;
+  margin-left: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  align-self: center;
+  background-color: #d9534f;
+  text-align: center;
+}
+
+#allergies-icon-container i {
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+}
+
+.dropbtn {
+  max-height: 56px;
+  padding: 16px;
+  font-size: 16px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.button-flag {
+  margin: 0 0 0 16px;
+  max-height: 30px;
+  align-self: center;
+  border-radius: 5px;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #5c636a;
+}
+
+.dropdown {
+  align-self: center;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  user-select: none;
+}
+
+.dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content i {
+  margin-right: 10px;
+}
+
+#myDropdown div:hover {
+  background-color: #ddd;
+}
+
+#allergies-icon-container div:hover {
+  background-color: #b02a37;
+}
+
+.showBlock {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.flex-container {
+  display: flex;
+}
