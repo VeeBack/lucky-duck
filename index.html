@@ -12,20 +12,49 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <script src="https://kit.fontawesome.com/dd99507b81.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/daniel-topnav.css">
     <title>Lucky Duck</title>
 </head>
 
 <body>
-    <div class="Navbar">
-        <div class="logo"></div>
-        <div class="name">
-            <h1>Lucky Duck Restaurang</h1>
-        </div>
-        <div class="dropdown">
-        </div>
-        <div class="allergens-icon"></div>
+    <header class="flex-container">
+        <!-- <div class="Navbar"> -->
+        <img src="/img/Lucky_duck1.png" alt="Lucky Duck">
 
-    </div>
+        <nav class="flex-container">
+            <div id="allergies-icon-container" class="flex-container">
+                <div onclick="toggleShowHide('navbar-barley')" id="navbar-barley" class="hide"><i class="fa-solid fa-wheat fa-2x"></i></div>
+                <div onclick="toggleShowHide('navbar-shrimp')" id="navbar-shrimp" class="hide"><i class="fa-solid fa-shrimp fa-2x"></i></div>
+                <div onclick="toggleShowHide('navbar-egg')" id="navbar-egg" class="hide"><i class="fa-solid fa-egg fa-2x"></i></div>
+                <div onclick="toggleShowHide('navbar-fish')" id="navbar-fish" class="hide"><i class="fa-solid fa-fish fa-2x"></i></div>
+                <div onclick="toggleShowHide('navbar-peanut')" id="navbar-peanut" class="hide"><i class="fa-solid fa-peanut fa-2x"></i></div>
+                <div onclick="toggleShowHide('navbar-milk')" id="navbar-milk" class="hide"><i class="fa-solid fa-cow fa-2x"></i></div>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="showDropDown('myDropdown')" class="dropbtn" id="dropbtn-allergies">Exkludera allergener
+                    <i id="dropdown-arrow-down" class="dropdown-arrow">&#x25BC;</i>
+                    <i id="dropdown-arrow-up" class="dropdown-arrow hide">&#x25B2;</i>
+                </button>
+
+                <div id="myDropdown" class="dropdown-content">
+                    <div onclick="toggleShowHide('navbar-barley')"><i class="fa-solid fa-wheat fa-lg"></i>Vete</div>
+                    <div onclick="toggleShowHide('navbar-shrimp')"><i class="fa-solid fa-shrimp fa-lg"></i>Skaldjur</div>
+                    <div onclick="toggleShowHide('navbar-egg')"><i class="fa-solid fa-egg fa-lg"></i>Ägg</div>
+                    <div onclick="toggleShowHide('navbar-fish')"><i class="fa-solid fa-fish fa-lg"></i>Fisk</div>
+                    <div onclick="toggleShowHide('navbar-peanut')"><i class="fa-solid fa-peanut fa-lg"></i>Jordnöt</div>
+                    <div onclick="toggleShowHide('navbar-milk')"><i class="fa-solid fa-cow fa-lg"></i>Mjölk</div>
+                </div>
+
+            </div>
+
+            <img onclick="toggleShowHide('button-se-flag'), toggleShowHide('button-uk-flag')" class="button-flag hide"
+                id="button-uk-flag" src="/img/united-kingdom.png" alt="English">
+            <img onclick="toggleShowHide('button-se-flag'), toggleShowHide('button-uk-flag')" class="button-flag"
+                id="button-se-flag" src="/img/sweden.png" alt="English">
+        </nav>
+
+    </header>
     <!--End of Navbar-->
     <!------------------------------------------------------------------>
 
@@ -122,7 +151,7 @@
        
         <button style="font-size:24px"><i class="fa-solid fa-sort"></i>
         
-        </div>
+    </div>
 
 
     <!-----End of sorting------------>
@@ -131,36 +160,8 @@
     <!--End of menu-component-->
 
 
-
-
-
-
-    <!------------------------------------------------------------------>
-    <div class="footer">
-        <div class="nav-footer"></div>
-        <div class="sort-icon"></div>
-
-
-        <!-----------Icons------------>
-
-        <div class="icon-bar">
-            <a href="#"><i class="fa fa-pig"></i></a>
-            <hr>
-            <a href="#"><i class="fa fa-cow"></i></a>
-            <hr>
-            <a href="#"><i class="fa fa-bird"></i></a>
-            <hr>
-            <a href="#"><i class="fa fa-carrot"></i></a>
-            <hr>
-            <a href="#"><i class="fa fa-fish"></i></a>
-        </div>
-
-
-        <!---------End of Icons--------->
-
-        <!--End of footer-->
-        <!------------------------------------------------------------------>
-        <script src="./lucky.script.js"></script>
+    <script src="./lucky.script.js"></script>
+    <script src="/daniel-topnav.js"></script>
 </body>
 
 </html>

@@ -3,20 +3,17 @@
   padding: 0px;
   list-style: none;
 }
-
 body {
   background-image: url(./img/background1.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Roboto Condensed", sans-serif;
 }
-
 .Navbar {
   background-color: #fff;
   height: 60px;
   display: flex;
 }
-
 .name {
   font-family: 'Sofia', sans-serif;
   color: black;
@@ -51,11 +48,6 @@ body {
   background-color: #fff;
 }
 
-#meal-11 {
-  justify-items: center;
-  margin-left: 100%;
-}
-
 .menu-text p {
   margin: 0px 2%;
   font-size: 18px;
@@ -72,17 +64,11 @@ body {
     grid-template-columns: 1fr;
     padding-top: 2.5rem;
   }
-
-  #meal-11 {
-    margin-left: 0px;
-  }
-
   .name {
     font-size: 12px;
     margin-left: 100px;
   }
 }
-
 /*-----------------icons-------------*/
 
 .icon-bar {
@@ -135,4 +121,3 @@ body {
   bottom: 2%;
   position: fixed;
 }
-
