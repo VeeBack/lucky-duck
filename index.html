@@ -108,6 +108,45 @@
   </div>
 
  </div><!--End of menu-component-->
+
+<!------------------------------------------------------------------>
+ <!-- A button to open the popup form -->
+<button class="open-button" onclick="openForm()">Logga in</button>
+
+<!-- The form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Logga in</h1>
+
+    <label for="email"><b>Pinkod</b></label>
+    <input class="inpt" type="text" placeholder="Skriv din pinkod" name="email" required>
+
+    
+    <button id="nr1" >1</button>
+    <button id="nr2" >2</button>
+    <button id="nr3" >3</button>
+    <button id="nr4" >4</button>
+    <button id="nr5" >5</button>
+    <button id="nr6" >6</button>
+    <button id="nr7" >7</button>
+    <button id="nr8" >8</button>
+    <button id="nr9" >9</button>
+    <button id="nr0" >0</button>
+
+    
+
+    <button type="submit" class="btn">Logga in</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+
+
+
+
+
+
 <!------------------------------------------------------------------>
  <div class="footer">
   <div class="nav-footer"></div>

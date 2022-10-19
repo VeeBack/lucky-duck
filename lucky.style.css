@@ -3,27 +3,31 @@
   padding: 0px;
   list-style: none;
 }
+
 body {
   background-image: url(./img/background1.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Roboto Condensed", sans-serif;
 }
-.Navbar{
+
+.Navbar {
   background-color: #fff;
   height: 60px;
   display: flex;
 }
+
 .name {
   font-family: 'Sofia', sans-serif;
   color: black;
   font-size: 14px;
-  margin-top:6px;
+  margin-top: 6px;
   margin-left: 200px;
-  text-shadow:2px 2px 2px rgb(131, 99, 18);
+  text-shadow: 2px 2px 2px rgb(131, 99, 18);
 }
+
 /*--------------menu-component------------*/
-.menu-component{
+.menu-component {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding-top: 3.5rem;
@@ -34,7 +38,7 @@ body {
   border-radius: 15px;
 }
 
-.meal .menu-text{
+.meal .menu-text {
   width: 220px;
   height: 200px;
   padding: .6rem;
@@ -44,10 +48,10 @@ body {
   display: flex;
   flex-direction: column;
   color: black;
-  background-color:#fff;
+  background-color: #fff;
 }
 
-#meal-11{
+#meal-11 {
   justify-items: center;
   margin-left: 100%;
 }
@@ -62,18 +66,174 @@ body {
   margin: 2% 6%;
   text-transform: uppercase;
 }
+
 @media screen and (max-width: 600px) {
   .menu-component {
     grid-template-columns: 1fr;
     padding-top: 2.5rem;
   }
-  #meal-11{
+
+  #meal-11 {
     margin-left: 0px;
   }
-  .name{
+
+  .name {
     font-size: 12px;
     margin-left: 100px;
   }
 }
-  
+
 /*-----------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 1100px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 200px;
+  right: 550px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=password] {
+  width: 70%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+
+
+
+/* Numbers */
+
+#nr0 {
+  margin-left: 15px;
+  width: 80px;
+  margin-left: 114px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#nr1 {
+  margin-left: 15px;
+  width: 80px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+}
+
+#nr2 {
+  margin-left: 15px;
+  width: 80px;
+  cursor: pointer;
+
+}
+
+
+#nr3 {
+  margin-left: 15px;
+  width: 80px;
+  cursor: pointer;
+}
+
+#nr4 {
+  margin-left: 15px;
+  width: 80px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#nr5 {
+  margin-left: 15px;
+  width: 80px;
+  cursor: pointer;
+}
+
+#nr6 {
+  margin-left: 15px;
+  width: 80px;
+  cursor: pointer;
+}
+
+#nr7 {
+  margin-left: 15px;
+  width: 80px;
+  cursor: pointer;
+}
+
+#nr8 {
+  margin-left: 15px;
+  width: 80px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#nr9 {
+  margin-left: 15px;
+  width: 80px;
+  cursor: pointer;
+}
