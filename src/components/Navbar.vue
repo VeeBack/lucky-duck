@@ -2,7 +2,7 @@
   <div class="floating-nav">
     <header class="flex-container">
       <!-- <div class="Navbar"> -->
-      <img src="/img/Lucky_duck1.png" alt="Lucky Duck" @click="secretMenu" />
+      <img src="./img/Lucky_duck1.png" alt="Lucky Duck" @click="secretMenu" />
 
       <nav class="flex-container">
         <div
@@ -44,7 +44,7 @@
 
         <img
           class="button-flag"
-          :src="`/img/${
+          :src="`./img/${
             $i18n.locale == 'sv' ? 'sweden.png' : 'united-kingdom.png'
           }`"
           @click="toggleLanguage"
