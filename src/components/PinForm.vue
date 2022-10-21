@@ -69,10 +69,11 @@ export default {
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
 }
 .form {
   border: 3px solid #f1f1f1;
-  z-index: 9;
+  z-index: 99999;
   background-color: #fff;
   padding: 16px;
   width: fit-content;

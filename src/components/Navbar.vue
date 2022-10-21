@@ -2,7 +2,15 @@
   <div class="floating-nav">
     <header class="flex-container">
       <!-- <div class="Navbar"> -->
-      <img src="../assets/Lucky_duck1.png" alt="Lucky Duck" @click="secretMenu" />
+      <div class="logo-container">
+        <img src="../assets/Lucky_duck1.png" alt="Lucky Duck" height="56" />
+        <div
+          class="logo-overlay"
+          @click="secretMenu"
+          @touchstart="touchStart"
+          @touchend="touchEnd"
+        ></div>
+      </div>
 
       <nav class="flex-container">
         <div
@@ -10,7 +18,7 @@
           @click="editormode"
           v-if="$store.state.editorMode"
         >
-          <i class="fa-solid fa-lock fa-2x"></i>
+          <i class="fa-solid fa-lock fa-2x" />
         </div>
         <div id="allergies-icon-container" class="flex-container">
           <AllergenIcon
@@ -27,9 +35,9 @@
             id="dropbtn-allergies"
           >
             {{ $t("navbar.exclude_allergens") }}
-            <i class="dropdown-arrow">{{
-              dropdown ? "&#x25B2;" : "&#x25BC;"
-            }}</i>
+            <i class="dropdown-arrow">
+              {{ dropdown ? "&#x25B2;" : "&#x25BC;" }}
+            </i>
           </button>
 
           <div id="myDropdown" class="dropdown-content" v-if="dropdown">
@@ -44,7 +52,7 @@
 
         <img
           class="button-flag"
-          :src="`./img/${
+          :src="`/lucky-duck/img/${
             $i18n.locale == 'sv' ? 'sweden.png' : 'united-kingdom.png'
           }`"
           @click="toggleLanguage"
@@ -71,11 +79,14 @@ export default {
       secret: {
         clicks: 0,
         lastClick: 0,
+        timer: null,
       },
     };
   },
   methods: {
     secretMenu() {
+      if (store.state.editorMode) return;
+
       if (this.lastClick + 2000 < Date.now()) this.clicks = 0;
       this.clicks++;
       this.lastClick = Date.now();
@@ -91,10 +102,22 @@ export default {
     editormode() {
       store.commit("editormode", false);
     },
+    touchStart(event) {
+      if (store.state.editorMode) return;
+
+      event.preventDefault();
+      if (!this.timer) {
+        this.timer = setTimeout(() => {
+          this.pinOpen = true;
+        }, 800);
+      }
+    },
+    touchEnd() {
+      clearTimeout(this.timer);
+      this.timer = null;
+    },
   },
-  mounted() {
-    console.log(this);
-  },
+  mounted() {},
 };
 </script>
 
@@ -207,5 +230,17 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
+  user-select: none;
+}
+.logo-container {
+  position: relative;
+}
+.logo-overlay {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1000;
 }
 </style>
